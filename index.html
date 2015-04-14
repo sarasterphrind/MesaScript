@@ -1,41 +1,29 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en-us">
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Mesascript : Lightweight, ruby-based language that provides a powerful way to make inlists for MESA projects." />
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Mesascript</title>
+    <meta charset="UTF-8">
+    <title>Mesascript by wmwolf</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
-
   <body>
+    <section class="page-header">
+      <h1 class="project-name">Mesascript</h1>
+      <h2 class="project-tagline">Lightweight, ruby-based language that provides a powerful way to make inlists for MESA projects.</h2>
+      <a href="https://github.com/wmwolf/MesaScript" class="btn">View on GitHub</a>
+      <a href="https://github.com/wmwolf/MesaScript/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/wmwolf/MesaScript/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/wmwolf/MesaScript">View on GitHub</a>
-
-          <h1 id="project_title">Mesascript</h1>
-          <h2 id="project_tagline">Lightweight, ruby-based language that provides a powerful way to make inlists for MESA projects.</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/wmwolf/MesaScript/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/wmwolf/MesaScript/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
-<a name="mesascript" class="anchor" href="#mesascript"><span class="octicon octicon-link"></span></a>MesaScript</h1>
+    <section class="main-content">
+      <h1>
+<a id="mesascript" class="anchor" href="#mesascript" aria-hidden="true"><span class="octicon octicon-link"></span></a>MesaScript</h1>
 
 <h3>
-<a name="mesa-requirement" class="anchor" href="#mesa-requirement"><span class="octicon octicon-link"></span></a>MESA Requirement!</h3>
+<a id="mesa-requirement" class="anchor" href="#mesa-requirement" aria-hidden="true"><span class="octicon octicon-link"></span></a>MESA Requirement!</h3>
 
 <p>In its current state, MesaScript requires MESA rev. 5596 or above. This is due
 to a sensitivity to where the <code>'.inc'</code> files are stored on earlier versions. If
@@ -43,7 +31,7 @@ there is demand for MesaScript for earlier revisions, I will look into making
 it backward compatible.</p>
 
 <h3>
-<a name="the-short-short-version" class="anchor" href="#the-short-short-version"><span class="octicon octicon-link"></span></a>The Short Short Version</h3>
+<a id="the-short-short-version" class="anchor" href="#the-short-short-version" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Short Short Version</h3>
 
 <p>To get up and running fast, skip to installation, then try and use the included
 sample file, <code>sample.rb</code> (via running <code>ruby sample.rb</code> in the command line). The
@@ -51,7 +39,7 @@ comments in <code>sample.rb</code> should get you started, especially if you hav
 a little Ruby know-how.</p>
 
 <h3>
-<a name="what-is-mesascript" class="anchor" href="#what-is-mesascript"><span class="octicon octicon-link"></span></a>What is MesaScript?</h3>
+<a id="what-is-mesascript" class="anchor" href="#what-is-mesascript" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is MesaScript?</h3>
 
 <p>Lightweight, Ruby-based language that provides a powerful way to make inlists
 for MESA projects. Really, MesaScript is a DSL (domain-specific language) built
@@ -59,10 +47,10 @@ on top of Ruby, so Ruby code "just works" inside MesaScript (if you're familiar
 with it, think of what SASS is to CSS, but on a smaller scale).</p>
 
 <h3>
-<a name="what-does-mesascript-do" class="anchor" href="#what-does-mesascript-do"><span class="octicon octicon-link"></span></a>What does MesaScript do?</h3>
+<a id="what-does-mesascript-do" class="anchor" href="#what-does-mesascript-do" aria-hidden="true"><span class="octicon octicon-link"></span></a>What does MesaScript do?</h3>
 
 <p>MesaScript provides a way to build inlists for use with
-<a href="http://mesa.sourceforge.net">MESA</a> using Ruby, though you need not know much 
+<a href="http://mesa.sourceforge.net">MESA</a> using Ruby, though you need not know much
 at all about Ruby to use it. The main point is that you can use
 variables when creating an inlist, making a reusable template for parameter
 space studies when only a few inlist commands vary between a large number of
@@ -79,18 +67,28 @@ editing and further generalization. In general, <em>writing an inlist in</em>
 <em>MesaScript is no more difficult than writing a normal inlist, but you have far</em>
 <em>more flexibility</em>. So why not give it a try?</p>
 
-<p>If you know a little Ruby (want to learn? 
+<p>If you know a little Ruby (want to learn?
 <a href="http://tryruby.org/levels/1/challenges/0">Try Ruby here!</a>), the possibilities
 are pretty wide open. You could easily make a script that starts with a given
 set of parameters, run MESA star, then use the output of that run to dictate a
 new inlist and run, creating a chain (maybe a MESA root find of sorts).</p>
 
 <h3>
-<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h3>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h3>
 
-<p>Someday, I hope to package this as a gem, but for now, it's staying hosted on 
-Github, which means you need to install it yourself. Clone or otherwise
-download the repository somewhere to your home directory with</p>
+<p>MesaScript is now available as a gem! Assuming you have the <code>gem</code> command up
+and running (you probably do, but if not, check out 
+<a href="https://rubygems.org">RubyGems</a> to get it up and running). Simply run</p>
+
+<pre><code>gem install mesa_script
+</code></pre>
+
+<p>and you should be good to go. You'll be able to include MesaScript in your
+ruby files with <code>require mesa_script</code>, and <code>inlist2mesascript</code> will be 
+available to you from the command line to convert your existing inlists to
+mesascript files.</p>
+
+<p>If you want to edit the source or don't want to use rubygems, clone or otherwise download the repository somewhere to your home directory with</p>
 
 <pre><code>git clone https://github.com/wmwolf/MesaScript.git ~/MesaScript
 </code></pre>
@@ -130,7 +128,7 @@ the MESA source on the fly (this also makes it nearly MESA version
 independent).</p>
 
 <h3>
-<a name="basic-usage" class="anchor" href="#basic-usage"><span class="octicon octicon-link"></span></a>Basic Usage</h3>
+<a id="basic-usage" class="anchor" href="#basic-usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Basic Usage</h3>
 
 <p>The <code>mesa_script.rb</code> file defines just one class, Inlist, which we'll interact
 with primarily through one class method, <code>make_inlist</code>. Just put the following
@@ -155,7 +153,7 @@ MesaScript, and you did so using fewer lines than it would have taken to
 actually make that inlist on your own (technically)!</p>
 
 <h3>
-<a name="entering-inlist-commands" class="anchor" href="#entering-inlist-commands"><span class="octicon octicon-link"></span></a>Entering Inlist Commands</h3>
+<a id="entering-inlist-commands" class="anchor" href="#entering-inlist-commands" aria-hidden="true"><span class="octicon octicon-link"></span></a>Entering Inlist Commands</h3>
 
 <p>Making blank inlists is boring, so now let's cover how you actually make useful
 inlists. For mesa inlists, there are really only two types of declarations:
@@ -164,7 +162,7 @@ they are far more common. Then we'll get to the more complicated array
 assignments.</p>
 
 <h4>
-<a name="scalar-assignments" class="anchor" href="#scalar-assignments"><span class="octicon octicon-link"></span></a>Scalar Assignments</h4>
+<a id="scalar-assignments" class="anchor" href="#scalar-assignments" aria-hidden="true"><span class="octicon octicon-link"></span></a>Scalar Assignments</h4>
 
 <p>As an example, let's say we want to set the initial mass of our star to 2.0
 solar masses. The inlist command for this is <code>initial_mass</code>. In a regular
@@ -191,10 +189,10 @@ functionality in, google something like "instance_eval setter method" to
 discover what took me too long to figure out.)</p>
 
 <h4>
-<a name="array-assignments" class="anchor" href="#array-assignments"><span class="octicon octicon-link"></span></a>Array Assignments</h4>
+<a id="array-assignments" class="anchor" href="#array-assignments" aria-hidden="true"><span class="octicon octicon-link"></span></a>Array Assignments</h4>
 
-<p>As an example, let's say we want to set a lower limit on a certain central 
-abundance as a stopping condition. Then we would, at the minimum, need to set 
+<p>As an example, let's say we want to set a lower limit on a certain central
+abundance as a stopping condition. Then we would, at the minimum, need to set
 the inlist command <code>xa_central_lower_limit_species(1) = 'h1'</code>, for example. In MesaScript, there are three ways to do this:</p>
 
 <pre><code>xa_central_lower_limit_species[1] = 'h1'    # These are
@@ -208,18 +206,18 @@ work:</p>
 <pre><code>xa_central_lower_limit_species(1) = 'h1'    # THIS ENDS IN SADNESS
 </code></pre>
 
-<p>I tried to program this functionality in, and the kind people at 
+<p>I tried to program this functionality in, and the kind people at
 <a href="http://stackoverflow.com/questions/21036873/how-do-i-write-a-method-to-edit-an-array-hash-using-parentheses-instead-of-squar/21044781?noredirect=1#21044781">StackOverflow</a> kindly but firmly convinced me it was utterly impossible to to with Ruby without writing a parser of my own. Just stick to the bracket syntax or the less natural parentheses/space notations.</p>
 
 <h4>
-<a name="other-details" class="anchor" href="#other-details"><span class="octicon octicon-link"></span></a>Other Details</h4>
+<a id="other-details" class="anchor" href="#other-details" aria-hidden="true"><span class="octicon octicon-link"></span></a>Other Details</h4>
 
 <p>That's really all you need to know to start making inlists with MesaScript,
 though I should remind you, especially if you aren't familiar with Ruby, about
 the basic types of entries you might use. Most inlist commands are one of the
-following: booleans, strings, floats, or integers. </p>
+following: booleans, strings, floats, or integers.</p>
 
-<p><strong>Booleans</strong> in Ruby are <code>true</code> and <code>false</code> (case matters, and no periods). </p>
+<p><strong>Booleans</strong> in Ruby are <code>true</code> and <code>false</code> (case matters, and no periods).</p>
 
 <p><strong>Strings</strong> work the same as in fortran, though
 single quotes are more "literal" than double quotes. Double quotes allow for
@@ -232,7 +230,7 @@ save_model true
 save_model_filename "my_star_#{my_mass}.mod"
 </code></pre>
 
-<p>will produce (among other things) the line 
+<p>will produce (among other things) the line
 <code>save_model_filename = 'my_star_2.0.mod'</code> in the resulting inlist. Note also the
 utility of having the initial mass and the save file name being dependent on a
 single variable.</p>
@@ -272,15 +270,15 @@ actual MesaScript code weave them into your inlist appropriately. This way, the
 actual parameter changing from inlist to inlist is taken outside of the actual
 inlist commands so you don't forget to change a particular command when you
 move on to a different run (like forgetting to change a <code>LOG_dir</code>, which I've
-done a few too many times and thus overwriten some data).</p>
+done a few too many times and thus overwritten some data).</p>
 
 <h3>
-<a name="deeper-and-deeper" class="anchor" href="#deeper-and-deeper"><span class="octicon octicon-link"></span></a>Deeper and Deeper...</h3>
+<a id="deeper-and-deeper" class="anchor" href="#deeper-and-deeper" aria-hidden="true"><span class="octicon octicon-link"></span></a>Deeper and Deeper...</h3>
 
-<p>Are you still reading this? Well, you must want to do more. </p>
+<p>Are you still reading this? Well, you must want to do more.</p>
 
 <h3>
-<a name="using-custom-namelists" class="anchor" href="#using-custom-namelists"><span class="octicon octicon-link"></span></a>Using Custom Namelists</h3>
+<a id="using-custom-namelists" class="anchor" href="#using-custom-namelists" aria-hidden="true"><span class="octicon octicon-link"></span></a>Using Custom Namelists</h3>
 
 <p>You can also make MesaScript know about additional namelists (or forget about
 the standard three). After requiring the <code>mesa_script</code> file, you can change the
@@ -309,12 +307,12 @@ Inlist.nt_paths ={
 }
 </code></pre>
 
-<p>That <em>should</em> set things up to work with custom namelists, so long as the 
+<p>That <em>should</em> set things up to work with custom namelists, so long as the
 <code>.inc</code> and <code>.defaults</code> files are formatted more or less the same as the "stock"
 ones.</p>
 
 <h3>
-<a name="accessing-current-values-and-displaying-default-values" class="anchor" href="#accessing-current-values-and-displaying-default-values"><span class="octicon octicon-link"></span></a>Accessing Current Values and Displaying Default Values</h3>
+<a id="accessing-current-values-and-displaying-default-values" class="anchor" href="#accessing-current-values-and-displaying-default-values" aria-hidden="true"><span class="octicon octicon-link"></span></a>Accessing Current Values and Displaying Default Values</h3>
 
 <p>Perhaps you want to display a default value in your inlist, but not actually
 change it. Well, most of the assignment methods mentioned earlier
@@ -329,7 +327,7 @@ name provided by the user. One final note about these methods, they always
 return the value associated with the inlist object (the new one if you assign
 it, or the current/default value if you don't set one).</p>
 
-<p>So if you want to access any scalar, just call its method without an argument. 
+<p>So if you want to access any scalar, just call its method without an argument.
 Not only does this return the default value, but it also flags the category for
 inclusion in the inlist so</p>
 
@@ -338,7 +336,7 @@ inclusion in the inlist so</p>
 
 <p>will set <code>save_this_value</code> to <code>1.0</code> (the default value in <code>controls.defaults</code>)
 unless you had already assigned another value, in which case that would be saved
-instead. Additionally, <code>initial_mass = 1.0</code> will appear in the final inlist, 
+instead. Additionally, <code>initial_mass = 1.0</code> will appear in the final inlist,
 even though we didn't give <code>initial_mass</code> a new value. In fact, we could just
 have a line like</p>
 
@@ -360,25 +358,23 @@ xa_central_lower_limit 1    # same as above
 </code></pre>
 
 <p>Note that these array methods, as indicated, point to hashes (not arrays) of
-values. So <code>xa_central_lower_limit_species[1] = 'h1'</code> would return 
+values. So <code>xa_central_lower_limit_species[1] = 'h1'</code> would return
 <code>{1 =&gt; 'h1'}</code>.</p>
 
 <h2>
-<a name="further-work" class="anchor" href="#further-work"><span class="octicon octicon-link"></span></a>Further Work</h2>
+<a id="further-work" class="anchor" href="#further-work" aria-hidden="true"><span class="octicon octicon-link"></span></a>Further Work</h2>
 
 <p>I warmly welcome bug reports, feature suggestions, and most all, pull requests!</p>
-      </section>
-    </div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Mesascript maintained by <a href="https://github.com/wmwolf">wmwolf</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/wmwolf/MesaScript">Mesascript</a> is maintained by <a href="https://github.com/wmwolf">wmwolf</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
-    </div>
 
-    
+    </section>
 
+  
   </body>
 </html>
+
